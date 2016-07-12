@@ -24,6 +24,33 @@ var MonsterModel = {
     * correctly named the monster, false otherwise
     */
    catchMonster : function (monsterName){
+       
    }  
            
 };
+
+$(document).ready(function() {
+    $(".catch").click(function() {
+        var check = $("input[name='monsterName']").val();    
+        if(check == "caterpie") {
+            alert("Catched!");
+       
+            
+            } else {
+                
+                alert("Sorry, master!");
+                
+                for(var i = 0; i < monsters.length; i++) {
+                    $(".card").remove();
+                    $(".card1").append("<div class='card'><h2>Monsters around you</h2> <img src='img/pikachu.png'><p><input type='text' name='monsterName' placeholder='Name the monster'></p><button class='catch'>Catch!</button></div>");
+            };
+        
+        };
+        
+    });
+});
+
+    
+    
+    
+    
